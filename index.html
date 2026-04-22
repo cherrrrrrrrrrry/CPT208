@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPT 208 - Group Work</title>
+    <title>XJTalk | Process Portfolio</title>
     <style>
+        :root {
+            --primary: #ffab8b;
+            --light: #fff5f0;
+            --dark: #2d3142;
+            --gray: #777;
+            --light-gray: #f5f5f5;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-        }
-
-        :root {
-            --primary: #ff8a5b;
-            --light: #fff5f0;
-            --dark: #2d3142;
-            --gray: #777;
-            --light-gray: #f5f5f5;
         }
 
         body {
@@ -26,287 +26,235 @@
             line-height: 1.6;
         }
 
+        /* 导航栏 */
         nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 8%;
-            background-color: white;
+            z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        nav ul {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
             color: var(--dark);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
-        .logo-icon {
-            width: 24px;
-            height: 24px;
-            background-color: var(--primary);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        nav ul li a:hover {
+            color: var(--primary);
         }
 
-        .hero {
-            padding: 6rem 8%;
+        /* 👇 这里改小了首页高度！！！ */
+        header {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             background: var(--light);
+            padding-top: 80px;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.1;
+        /* 👇 这里改小了首页标题字体！！！ */
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
+        header p {
+            font-size: 18px;
             color: var(--gray);
             max-width: 600px;
         }
 
-        .section {
-            padding: 5rem 8%;
-            position: relative;
+        /* 通用章节样式 */
+        section {
+            padding: 100px 10%;
+            min-height: 80vh;
         }
 
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 30%;
-            height: 100%;
-            background-color: var(--light);
-            z-index: -1;
-            clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
-        .section-number {
-            color: #ddd;
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: inline-block;
-            margin-right: 1rem;
-        }
-
-        .section-tag {
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 1rem;
-            font-weight: 600;
+        section:nth-child(even) {
+            background-color: var(--light-gray);
         }
 
         .section-title {
-            font-size: 2rem;
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
+            font-size: 32px;
+            margin-bottom: 50px;
+            position: relative;
         }
 
-        .section-content {
-            max-width: 900px;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
         }
 
-        .section-content h3 {
-            font-size: 1.3rem;
-            margin: 2rem 0 1rem;
-            color: var(--dark);
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
         }
 
-        .section-content p, .section-content ul {
-            color: var(--gray);
-            font-size: 1rem;
-            line-height: 1.7;
+        .text-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
         }
 
-        .section-content ul {
-            list-style: disc inside;
-            padding-left: 1rem;
-        }
-
-        .contrib-table {
+        .img-placeholder {
+            background: #eee;
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-style: italic;
+            color: #999;
         }
 
-        .contrib-table th, .contrib-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #eee;
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
         }
 
-        .contrib-table th {
-            background-color: var(--light);
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .section:nth-child(even)::before {
-            background-color: white;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .section {
-                padding: 3rem 5%;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
+        /* 页脚 */
+        footer {
+            padding: 50px;
+            text-align: center;
+            background: var(--dark);
+            color: white;
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo">
-        <div class="logo-icon"></div>
-        <span>CPT 208 Group Work</span>
-    </div>
-</nav>
-
-<section class="hero">
-    <h1>XJTAIK: AI-Powered EAP Discussion Room</h1>
-    <p>A design journey from research to reflection, creating a low-pressure practice space to reduce anxiety and build confidence for XJTLU EAP students.</p>
-</section>
-
-<section class="section">
-    <div class="section-header">
-        <span class="section-number">01</span>
-        <span class="section-tag">Research</span>
-        <h2 class="section-title">Motivation & Research</h2>
-    </div>
-    <div class="section-content">
-        <h3>The Why (200-word statement)</h3>
-        <p>We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence. Existing tools fail to address both the psychological safety and real-time feedback needs of multilingual learners. XJTAIK was created to bridge this gap by providing a low-pressure, AI-powered practice space that simulates real discussions while offering personalized, non-judgmental support.</p>
-
-        <h3>The Gap (4 Papers + 4 Commercial Products)</h3>
-        <p><strong>Academic Papers - Strengths:</strong></p>
+    <nav>
+        <div class="logo">XJTalk.</div>
         <ul>
-            <li>Validated the link between language anxiety and unwillingness to communicate</li>
-            <li>Low-stakes practice environments reduce anxiety</li>
-            <li>AI-driven scaffolding supports collaborative learning</li>
+            <li><a href="#motivation">Research</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#ideation">Ideation</a></li>
+            <li><a href="#implementation">Implementation</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
         </ul>
-        <p><strong>Academic Papers - Missed Opportunities:</strong></p>
-        <ul>
-            <li>No real-time, non-intrusive support during discussions</li>
-            <li>Lack of EAP-specific turn-by-turn feedback</li>
-            <li>No combination of psychological safety and data tracking</li>
-        </ul>
+    </nav>
 
-        <h3>The Stakeholders & Personas</h3>
-        <p><strong>Primary Users: EAP Students</strong><br>
-        Anxious students who avoid speaking and struggle with ideas during discussions.</p>
-        <p><strong>Secondary Users: EAP Teachers</strong><br>
-        Lecturers who need better insights into student participation.</p>
-    </div>
-</section>
+    <header>
+        <h1>XJTalk</h1>
+        <p>AI-Powered Interactive Room for XJTLU EAP Group Discussions</p>
+    </header>
 
-<section class="section">
-    <div class="section-header">
-        <span class="section-number">02</span>
-        <span class="section-tag">Needs</span>
-        <h2 class="section-title">User Requirements</h2>
-    </div>
-    <div class="section-content">
-        <h3>User Journey Map</h3>
-        <p>Students feel anxious → avoid discussion → struggle for ideas → lack feedback → lose confidence.</p>
+    <section id="motivation">
+        <h2 class="section-title">01. Motivation & Research</h2>
+        <div class="content-grid">
+            <div class="text-box">
+                <h3>The Why & The Gap</h3>
+                <p>Addressing high anxiety and "brain blanks" in EAP students. Unlike Doubao or Padlet, XJTalk provides adaptive scaffolding and XJTLU-specific feedback.</p>
+                <br>
+                <h3>The Stakeholders</h3>
+                <p><strong>Primary:</strong> EAP Students (low confidence, high anxiety).<br><strong>Secondary:</strong> EAP Teachers (need data-driven tracking).</p>
+            </div>
+            <div class="img-placeholder">[Place Persona & Research Data Image Here]</div>
+        </div>
+    </section>
 
-        <h3>3 Must-Have "Playful" Requirements</h3>
-        <ul>
-            <li>Low-pressure, judgment-free practice environment</li>
-            <li>User-controlled, gentle AI hints during silence</li>
-            <li>Supportive, clear feedback after discussion</li>
-        </ul>
+    <section id="requirements">
+        <h2 class="section-title">02. User Requirements</h2>
+        <div class="content-grid">
+            <div class="img-placeholder">[Place User Journey Map Here]</div>
+            <div class="text-box">
+                <h3>Must-haves</h3>
+                <ul>
+                    <li>Real-time AI prompts to reduce silence.</li>
+                    <li>Automatic performance tracking for teachers.</li>
+                    <li>Non-forced visual alerts for social flow.</li>
+                </ul>
+                <br>
+                <p><i>Evidence of Life:</i> [Link to Interview Video/Photos]</p>
+            </div>
+        </div>
+    </section>
 
-        <h3>Evidence of Life</h3>
-        <p>We conducted user interviews and field observations to understand real student pain points.</p>
-    </div>
-</section>
+    <section id="ideation">
+        <h2 class="section-title">03. Ideation & Alternatives</h2>
+        <div class="content-grid">
+            <div class="text-box">
+                <h3>The "Crazy Eights" & Alternatives</h3>
+                <p>We explored manual muting vs. AI-led interruption. We chose the latter to empower human agency while maintaining psychological safety.</p>
+                <br>
+                <p><a href="#" style="color: var(--primary);">View Clickable Figma Prototype →</a></p>
+            </div>
+            <div class="img-placeholder">[Place Sketches & Figma Screenshots Here]</div>
+        </div>
+    </section>
 
-<section class="section">
-    <div class="section-header">
-        <span class="section-number">03</span>
-        <span class="section-tag">Ideation</span>
-        <h2 class="section-title">Ideation & Alternatives</h2>
-    </div>
-    <div class="section-content">
-        <h3>Crazy Eights Sketches</h3>
-        <p>We created 8 quick sketches to explore interfaces for rooms, discussions, hints, and summaries.</p>
+    <section id="implementation">
+        <h2 class="section-title">04. Technical Implementation</h2>
+        <div class="content-grid">
+            <div class="img-placeholder">[Place System Architecture Diagram Here]</div>
+            <div class="text-box">
+                <h3>System Architecture</h3>
+                <p>Using Whisper API for Audio-to-Text and LLMs for real-time evaluation. Data flow handles anonymous UUIDs to ensure privacy.</p>
+                <br>
+                <h3>Individual Contributions</h3>
+                <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; border-color: #ddd;">
+                    <tr><th>Member</th><th>Role</th></tr>
+                    <tr><td>Member A</td><td>Frontend & UI</td></tr>
+                    <tr><td>Member B</td><td>Backend & AI</td></tr>
+                    <tr><td>Member C</td><td>User Research</td></tr>
+                    <tr><td>Member D</td><td>Testing & QA</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
 
-        <h3>Design Alternatives Comparison</h3>
-        <p><strong>Option 1: Automatic hints</strong> – Too intrusive, rejected.<br>
-        <strong>Option 2: No hints</strong> – No support during struggles, rejected.<br>
-        <strong>Option 3: User-controlled hints</strong> – Balanced support and independence, chosen.</p>
-    </div>
-</section>
+    <section id="evaluation">
+        <h2 class="section-title">05. Evaluation & Reflection</h2>
+        <div class="content-grid">
+            <div class="text-box">
+                <h3>Usability Testing</h3>
+                <p>Tested with 23 EAP students. 87.3% adoption rate. Feedback led to "Granular Scores" instead of simple pass/fail.</p>
+                <br>
+                <h3>Final Reflection</h3>
+                <p>Discussion on the ethical use of AI and social implications of monitoring student discussions.</p>
+            </div>
+            <div class="img-placeholder">[Place Testing Result Charts Here]</div>
+        </div>
+    </section>
 
-<section class="section">
-    <div class="section-header">
-        <span class="section-number">04</span>
-        <span class="section-tag">Build</span>
-        <h2 class="section-title">Technical Implementation</h2>
-    </div>
-    <div class="section-content">
-        <h3>System Architecture</h3>
-        <p>Frontend for interface, backend for room management, AI for hints and summaries. The flow: Join → Discuss → Summary.</p>
-
-        <h3>Individual Contributions</h3>
-        <table class="contrib-table">
-            <tr>
-                <th>Team Member</th>
-                <th>Contributions</th>
-            </tr>
-            <tr>
-                <td>Kaihan Ouyang</td>
-                <td>Backend development, room & user management</td>
-            </tr>
-            <tr>
-                <td>Caiyi Yang</td>
-                <td>UI/UX design, prototypes</td>
-            </tr>
-            <tr>
-                <td>Fang Yan</td>
-                <td>AI integration, logic & testing</td>
-            </tr>
-            <tr>
-                <td>Hanqi Hao</td>
-                <td>User research, evaluation & writing</td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-<section class="section">
-    <div class="section-header">
-        <span class="section-number">05</span>
-        <span class="section-tag">Reflect</span>
-        <h2 class="section-title">Evaluation & Reflection</h2>
-    </div>
-    <div class="section-content">
-        <h3>Usability Testing</h3>
-        <p>Testing with real EAP students showed improved confidence and reduced anxiety.</p>
-
-        <h3>Iterative Refinement</h3>
-        <p>We improved hint control and simplified feedback reports based on user feedback.</p>
-
-        <h3>Final Reflection</h3>
-        <p>XJTAIK puts students first, using AI to support—not replace—human learning. The design focuses on safety, respect, and confidence building.</p>
-    </div>
-</section>
+    <footer>
+        <p>&copy; 2026 XJTalk Project - CPT208 Groupwork</p>
+    </footer>
 
 </body>
 </html>
