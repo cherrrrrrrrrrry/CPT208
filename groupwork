@@ -26,7 +26,6 @@
             line-height: 1.6;
         }
 
-        /* 导航栏 */
         nav {
             display: flex;
             justify-content: space-between;
@@ -51,52 +50,9 @@
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--gray);
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .hire-btn {
-            background-color: var(--dark);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        /* 英雄区 */
         .hero {
-            background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://picsum.photos/id/1068/1600/800');
-            background-size: cover;
-            background-position: center;
             padding: 6rem 8%;
-            position: relative;
-        }
-
-        .hero-badge {
-            background-color: var(--primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            display: inline-block;
-            margin-bottom: 1rem;
+            background: var(--light);
         }
 
         .hero h1 {
@@ -109,35 +65,8 @@
             font-size: 1.1rem;
             color: var(--gray);
             max-width: 600px;
-            margin-bottom: 2rem;
         }
 
-        /* 分类导航 */
-        .category-tabs {
-            display: flex;
-            gap: 1rem;
-            padding: 2rem 8%;
-            background-color: white;
-            justify-content: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .tab {
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            color: var(--gray);
-            font-size: 0.9rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .tab.active {
-            background-color: var(--light);
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        /* 章节通用样式 */
         .section {
             padding: 5rem 8%;
             position: relative;
@@ -202,7 +131,6 @@
             padding-left: 1rem;
         }
 
-        /* 表格样式 */
         .contrib-table {
             width: 100%;
             border-collapse: collapse;
@@ -223,29 +151,11 @@
             font-weight: 600;
         }
 
-        /* 按钮 */
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #ff7043;
-        }
-
-        /* 交替背景 */
         .section:nth-child(even)::before {
             background-color: white;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
 
-        /* 响应式 */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -256,145 +166,147 @@
             .section-title {
                 font-size: 1.5rem;
             }
-            .nav-links {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav>
-        <div class="logo">
-            <div class="logo-icon"></div>
-            <span>CPT 205 Group Work</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#research">Research</a></li>
-            <li><a href="#requirements">Requirements</a></li>
-            <li><a href="#ideation">Ideation</a></li>
-            <li><a href="#implementation">Implementation</a></li>
-            <li><a href="#reflection">Reflection</a></li>
-        </ul>
-        <a href="#" class="hire-btn">View Project</a>
-    </nav>
 
-    <!-- 英雄区 -->
-    <section class="hero">
-        <span class="hero-badge">CPT208 Process Portfolio</span>
-        <h1>XJTAIK: AI-Powered EAP Discussion Room</h1>
-        <p>
-            A design journey from research to reflection, creating a low-pressure practice space to reduce anxiety and build confidence for XJTLU EAP students.
-        </p>
-    </section>
-
-    <!-- 分类导航 -->
-    <div class="category-tabs">
-        <a href="#research" class="tab active">All</a>
-        <a href="#research" class="tab">Research</a>
-        <a href="#requirements" class="tab">Requirements</a>
-        <a href="#ideation" class="tab">Ideation</a>
-        <a href="#implementation" class="tab">Implementation</a>
-        <a href="#reflection" class="tab">Reflection</a>
+<nav>
+    <div class="logo">
+        <div class="logo-icon"></div>
+        <span>CPT 205 Group Work</span>
     </div>
+</nav>
 
-    <!-- 1. Motivation & Research -->
-    <section id="research" class="section">
-        <div class="section-header">
-            <span class="section-number">01</span>
-            <span class="section-tag">Research</span>
-            <h2 class="section-title">Motivation & Research</h2>
-        </div>
-        <div class="section-content">
-            <h3>The Why (200-word statement)</h3>
-            <p>
-                We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence. Existing tools fail to address both the psychological safety and real-time feedback needs of multilingual learners. XJTAIK was created to bridge this gap by providing a low-pressure, AI-powered practice space that simulates real discussions while offering personalized, non-judgmental support. Our goal is to help students build confidence step-by-step in a safe environment.
-            </p>
+<section class="hero">
+    <h1>XJTAIK: AI-Powered EAP Discussion Room</h1>
+    <p>A design journey from research to reflection, creating a low-pressure practice space to reduce anxiety and build confidence for XJTLU EAP students.</p>
+</section>
 
-            <h3>The Gap (4 Papers + 4 Commercial Products)</h3>
-            <p><strong>Academic Papers - Strengths:</strong></p>
-            <ul>
-                <li>Validated the link between language anxiety and unwillingness to communicate in multilingual contexts</li>
-                <li>Proven that low-stakes practice environments reduce anxiety and build confidence</li>
-                <li>Outlined frameworks for AI-driven scaffolding in collaborative learning</li>
-            </ul>
-            <p><strong>Academic Papers - Missed Opportunities:</strong></p>
-            <ul>
-                <li>Few studies address real-time, non-intrusive support during live discussions</li>
-                <li>Lack of focus on granular, turn-by-turn feedback for EAP contexts</li>
-                <li>No frameworks combining psychological safety with data-driven progress tracking</li>
-            </ul>
+<section class="section">
+    <div class="section-header">
+        <span class="section-number">01</span>
+        <span class="section-tag">Research</span>
+        <h2 class="section-title">Motivation & Research</h2>
+    </div>
+    <div class="section-content">
+        <h3>The Why (200-word statement)</h3>
+        <p>We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence. Existing tools fail to address both the psychological safety and real-time feedback needs of multilingual learners. XJTAIK was created to bridge this gap by providing a low-pressure, AI-powered practice space that simulates real discussions while offering personalized, non-judgmental support.</p>
 
-            <p style="margin-top:1.5rem;"><strong>Commercial Products - Strengths:</strong></p>
-            <ul>
-                <li>Doubao: Strong AI conversation and summarization features</li>
-                <li>Padlet: Supports collaborative discussion spaces</li>
-                <li>ArguText: Built for structured argumentation practice</li>
-                <li>Zoom/Teams: Common tools for virtual discussions</li>
-            </ul>
-            <p><strong>Commercial Products - Limitations:</strong></p>
-            <ul>
-                <li>None offer EAP-specific scaffolding or anxiety-reducing design</li>
-                <li>No multi-user simulation with role-taking and turn management</li>
-                <li>Lack of turn-by-turn participation tracking and personalized feedback reports</li>
-            </ul>
+        <h3>The Gap (4 Papers + 4 Commercial Products)</h3>
+        <p><strong>Academic Papers - Strengths:</strong></p>
+        <ul>
+            <li>Validated the link between language anxiety and unwillingness to communicate</li>
+            <li>Low-stakes practice environments reduce anxiety</li>
+            <li>AI-driven scaffolding supports collaborative learning</li>
+        </ul>
+        <p><strong>Academic Papers - Missed Opportunities:</strong></p>
+        <ul>
+            <li>No real-time, non-intrusive support during discussions</li>
+            <li>Lack of EAP-specific turn-by-turn feedback</li>
+            <li>No combination of psychological safety and data tracking</li>
+        </ul>
 
-            <h3>The Stakeholders & Personas</h3>
-            <p><strong>Primary Users: EAP Students</strong></p>
-            <p>Persona 1: An anxious Year 1 student who avoids speaking in class, struggles with thinking of ideas mid-discussion, and wants to practice before group work.</p>
-            <p style="margin-top:1rem;"><strong>Secondary Users: EAP Teachers</strong></p>
-            <p>Persona 2: An EAP lecturer who cannot monitor every group simultaneously and needs data-driven insights to identify students who need extra support.</p>
-        </div>
-    </section>
+        <h3>The Stakeholders & Personas</h3>
+        <p><strong>Primary Users: EAP Students</strong><br>
+        Anxious students who avoid speaking and struggle with ideas during discussions.</p>
+        <p><strong>Secondary Users: EAP Teachers</strong><br>
+        Lecturers who need better insights into student participation.</p>
+    </div>
+</section>
 
-    <!-- 2. User Requirements -->
-    <section id="requirements" class="section">
-        <div class="section-header">
-            <span class="section-number">02</span>
-            <span class="section-tag">Needs</span>
-            <h2 class="section-title">User Requirements</h2>
-        </div>
-        <div class="section-content">
-            <h3>User Journey Map</h3>
-            <p>
-                The journey starts with "Setup Anxiety" (fear of joining discussions), moves to "Practice" (blanking out, running out of ideas), then "Feedback" (uncertainty about performance), and ends with "Success" (building confidence). Key pain points: silence anxiety, idea gaps, fear of judgment, and lack of actionable feedback.
-            </p>
+<section class="section">
+    <div class="section-header">
+        <span class="section-number">02</span>
+        <span class="section-tag">Needs</span>
+        <h2 class="section-title">User Requirements</h2>
+    </div>
+    <div class="section-content">
+        <h3>User Journey Map</h3>
+        <p>Students feel anxious → avoid discussion → struggle for ideas → lack feedback → lose confidence.</p>
 
-            <h3>3 Must-Have "Playful" Requirements</h3>
-            <ul>
-                <li><strong>Low-pressure, judgment-free practice:</strong> Anonymous rooms and AI partners to reduce anxiety</li>
-                <li><strong>Real-time, unobtrusive hints:</strong> Non-forced prompts to help users keep the conversation going</li>
-                <li><strong>Engaging feedback:</strong> Summaries and progress tracking that feels supportive, not punitive</li>
-            </ul>
+        <h3>3 Must-Have "Playful" Requirements</h3>
+        <ul>
+            <li>Low-pressure, judgment-free practice environment</li>
+            <li>User-controlled, gentle AI hints during silence</li>
+            <li>Supportive, clear feedback after discussion</li>
+        </ul>
 
-            <h3>Evidence of Life</h3>
-            <p>
-                Our team conducted 5 user interviews and 2 site observations (including EAP classroom sessions) to validate pain points. We have photos/videos of users sharing their anxiety experiences, practicing discussions, and testing early paper prototypes.
-            </p>
-        </div>
-    </section>
+        <h3>Evidence of Life</h3>
+        <p>We conducted user interviews and field observations to understand real student pain points.</p>
+    </div>
+</section>
 
-    <!-- 3. Ideation & Alternatives -->
-    <section id="ideation" class="section">
-        <div class="section-header">
-            <span class="section-number">03</span>
-            <span class="section-tag">Ideation</span>
-            <h2 class="section-title">Ideation & Alternatives</h2>
-        </div>
-        <div class="section-content">
-            <h3>Crazy Eights Sketches</h3>
-            <p>
-                We created 8 rapid hand-drawn sketches exploring different UI concepts: lobby rooms, discussion controls, hint triggers, feedback dashboards, anonymous profiles, role assignment, and summary screens. These sketches helped us quickly test ideas like manual vs. automatic hints, turn-taking controls, and different feedback visualizations.
-            </p>
+<section class="section">
+    <div class="section-header">
+        <span class="section-number">03</span>
+        <span class="section-tag">Ideation</span>
+        <h2 class="section-title">Ideation & Alternatives</h2>
+    </div>
+    <div class="section-content">
+        <h3>Crazy Eights Sketches</h3>
+        <p>We created 8 quick sketches to explore interfaces for rooms, discussions, hints, and summaries.</p>
 
-            <h3>Design Alternatives Comparison</h3>
-            <p><strong>Option 1: Automatic, constant AI hints</strong></p>
-            <p>Pros: Never runs out of ideas. Cons: Too intrusive, removes agency, feels like the AI is speaking for the user. <br>We rejected this to preserve user ownership of the conversation.</p>
+        <h3>Design Alternatives Comparison</h3>
+        <p><strong>Option 1: Automatic hints</strong> – Too intrusive, rejected.<br>
+        <strong>Option 2: No hints</strong> – No support during struggles, rejected.<br>
+        <strong>Option 3: User-controlled hints</strong> – Balanced support and independence, chosen.</p>
+    </div>
+</section>
 
-            <p style="margin-top:1rem;"><strong>Option 2: No AI hints, only post-discussion feedback</strong></p>
-            <p>Pros: No disruption to flow. Cons: Leaves users stuck in the moment, doesn’t address "brain blank" anxiety. <br>We rejected this because it failed to solve the core real-time pain point.</p>
+<section class="section">
+    <div class="section-header">
+        <span class="section-number">04</span>
+        <span class="section-tag">Build</span>
+        <h2 class="section-title">Technical Implementation</h2>
+    </div>
+    <div class="section-content">
+        <h3>System Architecture</h3>
+        <p>Frontend for interface, backend for room management, AI for hints and summaries. The flow: Join → Discuss → Summary.</p>
 
-            <p style="margin-top:1rem;"><strong>Option 3 (Chosen): User-controlled, context-aware hints</strong></p>
-            <p>Balances support and agency: hints only appear on demand or during silence, with manual turn-taking. This keeps the conversation natural while still providing a safety net.</p>
+        <h3>Individual Contributions</h3>
+        <table class="contrib-table">
+            <tr>
+                <th>Team Member</th>
+                <th>Contributions</th>
+            </tr>
+            <tr>
+                <td>Kaihan Ouyang</td>
+                <td>Backend development, room & user management</td>
+            </tr>
+            <tr>
+                <td>Caiyi Yang</td>
+                <td>UI/UX design, prototypes</td>
+            </tr>
+            <tr>
+                <td>Fang Yan</td>
+                <td>AI integration, logic & testing</td>
+            </tr>
+            <tr>
+                <td>Hanqi Hao</td>
+                <td>User research, evaluation & writing</td>
+            </tr>
+        </table>
+    </div>
+</section>
 
-            <h3>Low-Fi
+<section class="section">
+    <div class="section-header">
+        <span class="section-number">05</span>
+        <span class="section-tag">Reflect</span>
+        <h2 class="section-title">Evaluation & Reflection</h2>
+    </div>
+    <div class="section-content">
+        <h3>Usability Testing</h3>
+        <p>Testing with real EAP students showed improved confidence and reduced anxiety.</p>
+
+        <h3>Iterative Refinement</h3>
+        <p>We improved hint control and simplified feedback reports based on user feedback.</p>
+
+        <h3>Final Reflection</h3>
+        <p>XJTAIK puts students first, using AI to support—not replace—human learning. The design focuses on safety, respect, and confidence building.</p>
+    </div>
+</section>
+
+</body>
+</html>
