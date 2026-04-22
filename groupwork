@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XJTAIK | Process Portfolio</title>
+    <title>CPT 205 - Group Work</title>
     <style>
         * {
             margin: 0;
@@ -267,7 +267,7 @@
     <nav>
         <div class="logo">
             <div class="logo-icon"></div>
-            <span>Design Lab.</span>
+            <span>CPT 205 Group Work</span>
         </div>
         <ul class="nav-links">
             <li><a href="#research">Research</a></li>
@@ -397,89 +397,4 @@
             <p style="margin-top:1rem;"><strong>Option 3 (Chosen): User-controlled, context-aware hints</strong></p>
             <p>Balances support and agency: hints only appear on demand or during silence, with manual turn-taking. This keeps the conversation natural while still providing a safety net.</p>
 
-            <h3>Low-Fi Prototype</h3>
-            <p>
-                Clickable Figma prototype link: <em>(paste your Figma link here)</em>
-            </p>
-            <a href="#" class="btn">View Figma Prototype</a>
-        </div>
-    </section>
-
-    <!-- 4. Technical Implementation -->
-    <section id="implementation" class="section">
-        <div class="section-header">
-            <span class="section-number">04</span>
-            <span class="section-tag">Build</span>
-            <h2 class="section-title">Technical Implementation</h2>
-        </div>
-        <div class="section-content">
-            <h3>System Architecture</h3>
-            <p>
-                Our web app uses a client-server model: the frontend handles room setup, user controls, and UI; the backend manages room creation, turn tracking, speech-to-text, AI hint generation, and summary creation. Key flows: Setup → Lobby → Discuss → Summary, with real-time communication via WebSockets.
-            </p>
-
-            <h3>High-Fi Prototype</h3>
-            <p>
-                Deployed app URL: <em>(paste your GitHub.io / Vercel link here)</em>
-            </p>
-            <a href="#" class="btn">View Deployed App</a>
-
-            <h3>Individual Contributions</h3>
-            <table class="contrib-table">
-                <thead>
-                    <tr>
-                        <th>Team Member</th>
-                        <th>Contributions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kaihan Ouyang</td>
-                        <td>Backend development, room & user management, data flow design</td>
-                    </tr>
-                    <tr>
-                        <td>Caiyi Yang</td>
-                        <td>UI/UX design, Figma prototypes, frontend layout and components</td>
-                    </tr>
-                    <tr>
-                        <td>Fang Yan</td>
-                        <td>AI integration, hint & summary logic, testing with users</td>
-                    </tr>
-                    <tr>
-                        <td>Hanqi Hao</td>
-                        <td>User research, persona development, evaluation & reflection writing</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- 5. Evaluation & Reflection -->
-    <section id="reflection" class="section">
-        <div class="section-header">
-            <span class="section-number">05</span>
-            <span class="section-tag">Reflect</span>
-            <h2 class="section-title">Evaluation & Reflection</h2>
-        </div>
-        <div class="section-content">
-            <h3>Usability Testing (Alpha Version, N=3)</h3>
-            <p>
-                Testing with 3 real EAP students confirmed that users found the low-pressure environment helpful, appreciated the hints, and felt more confident after practice. Key feedback: hints should be less intrusive, and feedback reports need clearer, more actionable takeaways.
-            </p>
-
-            <h3>Iterative Refinement</h3>
-            <p>
-                We revised the hint system based on feedback: changed from automatic pop-ups to a user-controlled "Ask for Hint" button, and reduced the number of visual interruptions. We also simplified the summary report to highlight key participation metrics and strengths instead of just scores.
-            </p>
-
-            <h3>Final Reflection</h3>
-            <p>
-                <strong>Social/ethical implications:</strong> XJTAIK prioritizes psychological safety and user agency to avoid over-reliance on AI. We designed the system to keep the human at the center — the AI supports, not replaces, student practice. We also considered privacy by making rooms anonymous and not storing permanent user data.
-            </p>
-            <p style="margin-top:1rem;">
-                <strong>AI use in the project:</strong> AI was used as a collaborative tool for generating hints, summarizing discussions, and creating feedback reports, not for writing or designing the project itself. All AI outputs were reviewed and refined by the team to ensure they align with EAP learning goals and human-centric principles.
-            </p>
-        </div>
-    </section>
-</body>
-</html>
+            <h3>Low-Fi
