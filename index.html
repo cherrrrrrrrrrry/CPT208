@@ -26,7 +26,7 @@
             line-height: 1.6;
         }
 
-        /* 导航栏 */
+        /* 1. 导航栏 - 始终置顶且不消失 */
         nav {
             position: fixed;
             top: 0;
@@ -68,9 +68,9 @@
             color: var(--primary);
         }
 
-        /* 👇 这里改小了首页高度！！！ */
+        /* 2. Header 风格参考图三 */
         header {
-            height: 70vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -80,19 +80,18 @@
             padding-top: 80px;
         }
 
-        /* 👇 这里改小了首页标题字体！！！ */
         header h1 {
-            font-size: 48px;
+            font-size: 64px;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 20px;
             color: var(--gray);
             max-width: 600px;
         }
 
-        /* 通用章节样式 */
+        /* 3. 通用章节样式 */
         section {
             padding: 100px 10%;
             min-height: 80vh;
@@ -161,17 +160,17 @@
     <nav>
         <div class="logo">XJTalk.</div>
         <ul>
-            <li><a href="#motivation">Research</a></li>
-            <li><a href="#requirements">Requirements</a></li>
-            <li><a href="#ideation">Ideation</a></li>
-            <li><a href="#implementation">Implementation</a></li>
-            <li><a href="#evaluation">Evaluation</a></li>
+            <li><a href=" ">Research</a ></li>
+            <li><a href="#requirements">Requirements</a ></li>
+            <li><a href="#ideation">Ideation</a ></li>
+            <li><a href="#implementation">Implementation</a ></li>
+            <li><a href="#evaluation">Evaluation</a ></li>
         </ul>
     </nav>
 
     <header>
         <h1>XJTalk</h1>
-        <p>AI-Powered Interactive Room for XJTLU EAP Group Discussions</p>
+        <p>AI-Powered Interactive Room for XJTLU EAP Group Discussions</p >
     </header>
 
     <section id="motivation">
@@ -179,10 +178,10 @@
         <div class="content-grid">
             <div class="text-box">
                 <h3>The Why & The Gap</h3>
-                <p>Addressing high anxiety and "brain blanks" in EAP students. Unlike Doubao or Padlet, XJTalk provides adaptive scaffolding and XJTLU-specific feedback.</p>
+                <p>Addressing high anxiety and "brain blanks" in EAP students. Unlike Doubao or Padlet, XJTalk provides adaptive scaffolding and XJTLU-specific feedback.</p >
                 <br>
                 <h3>The Stakeholders</h3>
-                <p><strong>Primary:</strong> EAP Students (low confidence, high anxiety).<br><strong>Secondary:</strong> EAP Teachers (need data-driven tracking).</p>
+                <p><strong>Primary:</strong> EAP Students (low confidence, high anxiety).<br><strong>Secondary:</strong> EAP Teachers (need data-driven tracking).</p >
             </div>
             <div class="img-placeholder">[Place Persona & Research Data Image Here]</div>
         </div>
@@ -200,7 +199,7 @@
                     <li>Non-forced visual alerts for social flow.</li>
                 </ul>
                 <br>
-                <p><i>Evidence of Life:</i> [Link to Interview Video/Photos]</p>
+                <p><i>Evidence of Life:</i> [Link to Interview Video/Photos]</p >
             </div>
         </div>
     </section>
@@ -210,9 +209,9 @@
         <div class="content-grid">
             <div class="text-box">
                 <h3>The "Crazy Eights" & Alternatives</h3>
-                <p>We explored manual muting vs. AI-led interruption. We chose the latter to empower human agency while maintaining psychological safety.</p>
+                <p>We explored manual muting vs. AI-led interruption. We chose the latter to empower human agency while maintaining psychological safety.</p >
                 <br>
-                <p><a href="#" style="color: var(--primary);">View Clickable Figma Prototype →</a></p>
+                <p><a href="#" style="color: var(--primary);">View Clickable Figma Prototype →</a ></p >
             </div>
             <div class="img-placeholder">[Place Sketches & Figma Screenshots Here]</div>
         </div>
@@ -224,7 +223,7 @@
             <div class="img-placeholder">[Place System Architecture Diagram Here]</div>
             <div class="text-box">
                 <h3>System Architecture</h3>
-                <p>Using Whisper API for Audio-to-Text and LLMs for real-time evaluation. Data flow handles anonymous UUIDs to ensure privacy.</p>
+                <p>Using Whisper API for Audio-to-Text and LLMs for real-time evaluation. Data flow handles anonymous UUIDs to ensure privacy.</p >
                 <br>
                 <h3>Individual Contributions</h3>
                 <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; border-color: #ddd;">
@@ -243,17 +242,17 @@
         <div class="content-grid">
             <div class="text-box">
                 <h3>Usability Testing</h3>
-                <p>Tested with 23 EAP students. 87.3% adoption rate. Feedback led to "Granular Scores" instead of simple pass/fail.</p>
+                <p>Tested with 23 EAP students. 87.3% adoption rate. Feedback led to "Granular Scores" instead of simple pass/fail.</p >
                 <br>
                 <h3>Final Reflection</h3>
-                <p>Discussion on the ethical use of AI and social implications of monitoring student discussions.</p>
+                <p>Discussion on the ethical use of AI and social implications of monitoring student discussions.</p >
             </div>
             <div class="img-placeholder">[Place Testing Result Charts Here]</div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 XJTalk Project - CPT208 Groupwork</p>
+        <p>&copy; 2026 XJTalk Project - CPT208 Groupwork</p >
     </footer>
 
 </body>
